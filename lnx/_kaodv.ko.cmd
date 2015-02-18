@@ -1,0 +1,1 @@
+cmd_/home/lp4/reworkrrep/lnx/kaodv.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.8.0-29-generic/scripts/module-common.lds --build-id  -o /home/lp4/reworkrrep/lnx/kaodv.ko /home/lp4/reworkrrep/lnx/kaodv.o /home/lp4/reworkrrep/lnx/kaodv.mod.o

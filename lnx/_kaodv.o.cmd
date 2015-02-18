@@ -1,0 +1,1 @@
+cmd_/home/lp4/reworkrrep/lnx/kaodv.o := ld -m elf_x86_64   -r -o /home/lp4/reworkrrep/lnx/kaodv.o /home/lp4/reworkrrep/lnx/kaodv-mod.o /home/lp4/reworkrrep/lnx/kaodv-debug.o /home/lp4/reworkrrep/lnx/kaodv-netlink.o /home/lp4/reworkrrep/lnx/kaodv-queue.o /home/lp4/reworkrrep/lnx/kaodv-ipenc.o /home/lp4/reworkrrep/lnx/kaodv-expl.o 
