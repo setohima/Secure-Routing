@@ -1,13 +1,21 @@
 Introduction
 ============
 
-This is an AODV implementation developed at Uppsala University,
+
+The Secure Adhoc Demand Routing uses openssl security features to counter
+Man in the middle attack(MIMA) and Data integrity using hashing techniques.
+
+This version of protocol is also compiled for ARM devices.
+
+This is an Ad-hoc Routing implementation developed at Uppsala University,
 Sweden, with some funding from Ericsson AB. It has been developed
 mainly for use in the APE testbed, http://apetestbed.sourceforge.net.
 The code is released under the GNU General Public License (GPL). See
 the GPL document for more information.
 
-This release is based on AODV draft version 13. There are no
+The protocol was redesigned and security features were added on top it.
+
+This release is based on AODV draft version 2. There are no
 guarantees that it implements all features correctly, although this is
 the goal. The code is provided as is. See the CHANGELOG for updates
 and changes between releases.
@@ -26,11 +34,15 @@ tested with great results. If you happen to experience less successful
 operation of this implementation, please contact the author(s) and
 describe your problems.
 
+
+The new secure version of this protocol was tested with maximum of 7 nodes in the network.
+The performance metrics shows the delay in protocol is negligence.
+
 Requirements
 ============
 
 Real world:
-* Linux OS (2.4.x, 2.6.x).
+* Linux OS (2.4.x, 2.6.x upto 3.8.x).
 * Kernel with Netfilter support.
   Most Red Hat/Fedora kernels have this support.
 * Wireless LAN cards in ad-hoc mode (alternatively a wired setup can
@@ -39,6 +51,10 @@ Real world:
 
 ns-2:
 * See README.ns
+
+
+For the machine with Broadcom STA wireless adapters this would be difficult task.
+To run it on broadcom adapaters install jockey wireless drivers.
 
 Installation
 ============
@@ -295,14 +311,3 @@ Notes about the source code
 libipq.c and libipq.h are unmodified files from the netfilter
 package which are included here for convenience.
 
-Contact:
-========
-
-Source code and implementation questions:
-Erik Nordstr\F6m <erik.nordstrom@it.uu.se>
-
-NS port questions:
-Bj\F6rn Wiberg <bjorn.wiberg@home.se>
-
-Misc. questions:
-Henrik Lundgren <henrikl@docs.uu.se>
